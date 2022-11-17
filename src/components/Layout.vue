@@ -1,9 +1,22 @@
 <template>
   <div class="layout">
     <div class="layout__title">
-      <RouterLink :to="{ name: 'home' }" class="layout__link layout__title__home">PokeVite</RouterLink>
+      <RouterLink :to="{ name: 'pokemonList' }" class="layout__link layout__title__home">PokeVue</RouterLink>
       <img src="../assets/facet.png" alt=" facet" />
     </div>
+    <nav>
+      <ul>
+        <li>
+          <router-link class="navigation" :to="{name: 'pokemonList'}">Pokemons</router-link>
+        </li>
+        <li>
+          <router-link class="navigation" :to="{name: 'itemList'}">Items</router-link>
+        </li>
+        <li>
+          <router-link class="navigation" :to="{name: 'locationList'}">Locations</router-link>
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 
@@ -12,6 +25,7 @@
   position: fixed;
   width: 100%;
   box-shadow: 1px 1px 10px 0 black;
+  z-index: 100;
 }
 
 .layout__title {
@@ -39,6 +53,24 @@ nav {
   background-color: darkcyan;
   display: flex;
   justify-content: flex-start;
+  color: white;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation {
+  color: white;
+  margin-right: 2rem;
+  text-decoration: none;
+}
+
+.navigation:hover {
+  color: blanchedalmond;
 }
 
 .layout__nav__route {
