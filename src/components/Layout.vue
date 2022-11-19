@@ -4,23 +4,10 @@
       <RouterLink :to="{ name: 'pokemonList' }" class="layout__link layout__title__home">PokeVue</RouterLink>
       <img src="../assets/facet.png" alt=" facet" />
     </div>
-    <nav>
-      <ul>
-        <li>
-          <router-link class="navigation" :to="{name: 'pokemonList'}">Pokemons</router-link>
-        </li>
-        <li>
-          <router-link class="navigation" :to="{name: 'itemList'}">Items</router-link>
-        </li>
-        <li>
-          <router-link class="navigation" :to="{name: 'locationList'}">Locations</router-link>
-        </li>
-      </ul>
-    </nav>
   </div>
 </template>
 
-<style>
+<style scoped>
 .layout {
   position: fixed;
   width: 100%;

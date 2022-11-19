@@ -1,10 +1,10 @@
 <template>
-<div class="card" @click="goToPokemonDetails">
-  <div class="card__image">
-    <img :src="pokeImage" class="card-img-top" :alt="name">
+  <div class="card" @click="goToPokemonDetails">
+    <div class="card__image">
+      <img :src="pokeImage" class="card-img-top" :alt="name">
+    </div>
+    <h4 class="card-title">{{ pokeName }}</h4>
   </div>
-  <h4 class="card-title">{{pokeName}}</h4>
-</div>
 </template>
 
 <script>
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     goToPokemonDetails() {
-      this.$router.push({name: 'pokemon', params: {id: this.id}})
+      this.$router.push({ name: 'pokemon', params: { id: this.id } })
     }
   }
 };
